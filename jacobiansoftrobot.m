@@ -55,5 +55,5 @@ for i=1:length(t)
   
 end
 for i=1:length(Q)
-    elipse([Q(i,1),Q(i,2)])   
+    ellipse([Q(i,1),Q(i,2)])   
 end
