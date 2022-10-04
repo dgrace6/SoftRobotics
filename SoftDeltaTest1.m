@@ -19,7 +19,7 @@ r(2)=Lb/teta2;
 r(3)=Lb/teta3;
 
 L(:,1)=r(1)*[0;-(1-cos(teta(1))); sin(teta(1))];
-L(:,2)=r(1)*[(1-cos(teta(2)))*3^.5/2;(1-cos(teta(2)))/2; sin(teta(2))];
+L(:,2)=r(2)*[(1-cos(teta(2)))*3^.5/2;(1-cos(teta(2)))/2; sin(teta(2))];
 L(:,3)=r(3)*[-(1-cos(teta(3)))*3^.5/2;(1-cos(teta(3)))/2; sin(teta(3))];
 
 sp=10; 
@@ -60,7 +60,7 @@ for i=1:3
     l(i)=eval(((PP(:,i)-LL(:,i))'*(PP(:,i)-LL(:,i)))^.5);
 end
 L(:,1)=r(1)*[0;-(1-cos(teta(1))); sin(teta(1))];
-L(:,2)=r(1)*[(1-cos(teta(2)))*3^.5/2;(1-cos(teta(2)))/2; sin(teta(2))];
+L(:,2)=r(2)*[(1-cos(teta(2)))*3^.5/2;(1-cos(teta(2)))/2; sin(teta(2))];
 L(:,3)=r(3)*[-(1-cos(teta(3)))*3^.5/2;(1-cos(teta(3)))/2; sin(teta(3))];
 for i=1:3
     gama(:,i)=linspace(0,beta(i),10);
@@ -72,7 +72,6 @@ end
 axis equal grid on
 out=beta*180/pi;
 end
-
 
 
 
